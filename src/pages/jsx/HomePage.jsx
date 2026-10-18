@@ -147,7 +147,10 @@ export default function HomePage() {
       video.play().catch(() => {});
     }}
   >
-    <source src="/videos/snowboard.mp4" type="video/mp4" />
+<source
+  src={`${import.meta.env.BASE_URL}videos/snowboard.mp4`}
+  type="video/mp4"
+/>
     お使いのブラウザでは動画を再生できません。
   </video>
 
