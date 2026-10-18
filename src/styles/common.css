@@ -1,0 +1,57 @@
+
+/* 全画面で使えるボタン */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 17px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-light {
+  color: #17324c;
+  background: #ffffff;
+}
+
+/* 共通のテキストリンク */
+.text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* 共通のカードデザイン */
+.surface-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* 英語の小見出し */
+.section-kicker {
+  font-family: var(--english);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+/* 既存画面とレイアウトで使用する共通装飾 */
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #a9c1ff; outline-offset: 2px; }
+.button-secondary { background: #fff; color: #637188; border: 1px solid #e2e7ef; }
+.button-secondary:hover { background: #f7f9fc; }

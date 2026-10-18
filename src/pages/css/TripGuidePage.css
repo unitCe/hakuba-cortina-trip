@@ -1,0 +1,218 @@
+/* 元の styles.css から旅行ガイド画面のデザインを移行 */
+.welcome-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.button-outline-light { background: #ffffff1c; color: #fff; border-color: #ffffff66; }
+.guide-hero { min-height: 265px; padding: 32px 35px; overflow: hidden; border-radius: 20px; position: relative; color: #fff; background: linear-gradient(115deg,#123454,#1d6197 65%,#62a3d5); box-shadow: 0 14px 30px #143c641c; }
+.guide-hero-copy { position: relative; z-index: 2; max-width: 64%; }
+.guide-eyebrow { display: block; color: #c6e4ff; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; margin-bottom: 10px; }
+.guide-hero h1 { margin: 0; font-size: clamp(26px,3vw,36px); line-height: 1.4; letter-spacing: -.8px; }
+.guide-hero p { margin: 10px 0 14px; color: #e0efff; font-size: 13px; }
+.guide-hero-date { font-weight: 700; font-size: 13px; }
+.guide-hero-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; }
+.guide-hero-pills span { background: #ffffff20; border: 1px solid #ffffff40; padding: 5px 9px; border-radius: 99px; font-size: 10px; }
+.guide-hero-art { position: absolute; inset: 0 0 0 48%; overflow: hidden; }
+.guide-sun { position: absolute; width: 62px; height: 62px; border-radius: 50%; background: #ffdfa8; top: 28px; right: 21%; box-shadow: 0 0 45px #ffe4b54a; }
+.guide-mountain { position: absolute; bottom: -23px; width: 0; height: 0; border-left: 160px solid transparent; border-right: 160px solid transparent; border-bottom: 205px solid #86b6dd; right: -18px; }
+.guide-mountain.gm-back { right: 105px; bottom: -40px; border-left-width: 185px; border-right-width: 185px; border-bottom-width: 170px; border-bottom-color: #4e82b3; }
+.guide-mountain.gm-front { right: -68px; border-bottom-color: #b6d5ee; }
+.guide-slope { position: absolute; height: 90px; bottom: -38px; left: 3%; right: -5%; background: #e9f5ff; border-radius: 50% 50% 0 0; transform: rotate(-8deg); }
+.guide-board { position: absolute; right: 22%; bottom: 31px; font-size: 42px; filter: drop-shadow(0 5px 3px #12345435); }
+.guide-quick-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; }
+.guide-quick-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 17px; display: grid; gap: 5px; box-shadow: 0 3px 12px #1d315006; }
+.guide-quick-icon { font-size: 21px; margin-bottom: 2px; }
+.guide-quick-card small,.guide-info-item>span { color: #8794a7; font-size: 10px; font-weight: 700; }
+.guide-quick-card strong { font-size: 13px; line-height: 1.55; }
+.guide-quick-card>span:last-child { color: #8490a3; font-size: 11px; }
+.guide-panel { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 25px; box-shadow: 0 3px 12px #1d315006; }
+.guide-section-heading { margin-bottom: 19px; }
+.guide-section-heading>span { display: block; color: #8b9bb2; font-size: 9px; font-weight: 800; letter-spacing: 1.8px; margin-bottom: 4px; }
+.guide-section-heading h2 { margin: 0; color: #243650; font-size: 21px; letter-spacing: -.3px; }
+.guide-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.guide-info-item { background: #f6f8fc; border-radius: 11px; padding: 15px; }
+.guide-info-item strong { display: block; margin: 6px 0; font-size: 13px; line-height: 1.7; }
+.guide-info-item p { color: #77859a; font-size: 11px; line-height: 1.8; margin: 0; }
+.guide-link-row,.guide-meal-links { display: flex; flex-wrap: wrap; gap: 8px 15px; margin-top: 16px; }
+.guide-link-row a,.guide-meal-links a,.guide-timeline-body>a { color: var(--blue); font-size: 11px; font-weight: 700; text-decoration: none; }
+.guide-link-row a:hover,.guide-meal-links a:hover,.guide-timeline-body>a:hover { text-decoration: underline; }
+.guide-alert { border: 1px solid #f1dfad; background: #fff8e7; color: #76551a; border-radius: 12px; padding: 15px 17px; margin: 12px 0 20px; }
+.guide-alert strong { font-size: 13px; }
+.guide-alert p { margin: 5px 0 0; font-size: 11px; line-height: 1.9; }
+.guide-alert-link { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 800; color: #986510; }
+.guide-alert-warm { background: #f4f8ff; border-color: #dce7f6; color: #31537d; margin: 18px 0 0; }
+.guide-timeline { display: grid; gap: 0; }
+.guide-timeline-item { display: grid; grid-template-columns: 42px 1fr; gap: 14px; position: relative; padding-bottom: 22px; }
+.guide-timeline-item:not(:last-child):before { content: ""; position: absolute; left: 20px; top: 42px; bottom: 0; width: 1px; background: #dbe5f1; }
+.guide-timeline-marker { width: 42px; height: 42px; display: grid; place-items: center; background: #edf4ff; border: 1px solid #dce8fa; border-radius: 13px; font-size: 19px; z-index: 1; }
+.guide-timeline-body { padding: 1px 0 0; }
+.guide-timeline-meta { display: flex; gap: 10px; flex-wrap: wrap; color: #6480a1; font-size: 10px; font-weight: 700; }
+.guide-timeline-meta span:last-child { color: #8794a7; font-weight: 500; }
+.guide-timeline-body h3 { margin: 5px 0; color: #25364e; font-size: 14px; }
+.guide-timeline-body p { margin: 0 0 5px; color: #718096; font-size: 11px; line-height: 1.85; }
+.guide-muted { color: #7e8ba0; font-size: 11px; line-height: 1.8; margin: -8px 0 15px; }
+.guide-price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.guide-price-card { border: 1px solid #e3eaf5; border-radius: 13px; padding: 18px; background: #f8faff; }
+.guide-price-card>span { display: block; color: #74849b; font-size: 11px; font-weight: 700; }
+.guide-price-card>strong { display: block; color: #285dba; font-size: 28px; letter-spacing: -.6px; margin: 7px 0 2px; }
+.guide-price-card>strong small { font-size: 14px; margin-left: 3px; }
+.guide-price-card p { margin: 0; color: #8592a5; font-size: 10px; }
+.guide-cost-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-top: 17px; }
+.guide-cost-card { background: #f2faf6; border: 1px solid #dcefe4; border-radius: 12px; padding: 16px; }
+.guide-cost-card-extra { background: #fff9ef; border-color: #f4e7cc; }
+.guide-cost-card h3 { font-size: 12px; margin: 0 0 10px; color: #376a53; }
+.guide-cost-card-extra h3 { color: #8b6325; }
+.guide-cost-card ul { padding-left: 17px; margin: 0; color: #617469; font-size: 11px; line-height: 1.9; }
+.guide-cost-card-extra ul { color: #7c6c51; }
+.guide-cost-card>p { color: #8b7b61; font-size: 10px; line-height: 1.7; margin: 8px 0 0; }
+.guide-bank { margin-top: 17px; padding: 16px; border: 1px solid #e4eaf2; border-radius: 12px; }
+.guide-bank>div:first-child { display: flex; gap: 11px; align-items: flex-start; }
+.guide-bank-icon { font-size: 24px; }
+.guide-bank h3 { margin: 0 0 5px; font-size: 13px; }
+.guide-bank p { margin: 0; color: #7d899b; font-size: 11px; line-height: 1.8; }
+.guide-bank-placeholder { margin-top: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 13px; background: #f6f8fb; border-radius: 8px; color: #8490a3; font-size: 10px; }
+.guide-bank-placeholder strong { color: #8794a7; }
+.guide-small-note { color: #8b95a4; font-size: 10px; line-height: 1.8; margin: 12px 0 0; }
+.guide-weather-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.guide-weather-card { padding: 18px; border-radius: 13px; border: 1px solid #dce8f5; background: linear-gradient(145deg,#f7fbff,#edf5fd); }
+.guide-weather-date { color: #66809f; font-size: 11px; font-weight: 800; }
+.guide-weather-symbol { font-size: 27px; margin: 11px 0 3px; }
+.guide-weather-card>strong { display: block; font-size: 23px; color: #285b91; }
+.guide-weather-card>span:nth-of-type(2) { color: #8494a7; font-size: 10px; }
+.guide-weather-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 13px; }
+.guide-weather-stats>div { background: #ffffffb8; border-radius: 8px; padding: 9px; }
+.guide-weather-stats small,.guide-weather-stats b { display: block; }
+.guide-weather-stats small { color: #8a98aa; font-size: 9px; }
+.guide-weather-stats b { color: #526c8b; font-size: 11px; margin-top: 2px; }
+.guide-weather-card p { color: #7c8ca0; font-size: 10px; line-height: 1.7; margin: 10px 0 0; }
+.guide-weather-footnote { color: #718096; font-size: 11px; margin: 14px 0 0; line-height: 1.8; }
+.guide-all-links { display: grid; gap: 8px; }
+.guide-all-link { display: flex; align-items: center; gap: 12px; padding: 12px 13px; border: 1px solid #e8edf4; border-radius: 10px; transition: background .15s,border-color .15s; }
+.guide-all-link:hover { background: #f7f9ff; border-color: #dce5fa; }
+.guide-link-kind { flex: 0 0 62px; text-align: center; padding: 4px 5px; border-radius: 6px; background: #edf2ff; color: #4768bd; font-size: 9px; font-weight: 800; }
+.guide-all-link strong { flex: 1; min-width: 0; font-size: 11px; color: #34445c; }
+.guide-link-arrow { color: #8c9ab0; }
+.guide-bottom-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+@media (max-width:760px) {
+.guide-hero { padding: 24px 20px; min-height: 300px; }
+.guide-hero-copy { max-width: 100%; }
+.guide-hero h1 { font-size: 26px; max-width: 78%; }
+.guide-hero p { max-width: 75%; font-size: 11px; }
+.guide-hero-date { font-size: 11px; }
+.guide-hero-art { inset: 0 0 0 32%; opacity: .58; }
+.guide-sun { width: 43px; height: 43px; top: 24px; right: 15%; }
+.guide-mountain { border-left-width: 105px; border-right-width: 105px; border-bottom-width: 130px; }
+.guide-mountain.gm-back { right: 35px; border-left-width: 115px; border-right-width: 115px; border-bottom-width: 105px; }
+.guide-mountain.gm-front { right: -72px; }
+.guide-board { right: 15%; bottom: 25px; font-size: 32px; }
+.guide-quick-grid { gap: 8px; }
+.guide-quick-card { padding: 12px 10px; }
+.guide-quick-icon { font-size: 18px; }
+.guide-quick-card strong { font-size: 10px; overflow-wrap: anywhere; }
+.guide-quick-card small,.guide-quick-card>span:last-child { font-size: 9px; }
+.guide-panel { padding: 18px 14px; }
+.guide-section-heading h2 { font-size: 18px; }
+.guide-info-grid,.guide-price-grid,.guide-cost-columns,.guide-weather-grid { grid-template-columns: 1fr; }
+.guide-link-row,.guide-meal-links { display: grid; gap: 10px; }
+.guide-timeline-item { grid-template-columns: 36px 1fr; gap: 10px; }
+.guide-timeline-marker { width: 36px; height: 36px; font-size: 16px; }
+.guide-timeline-item:not(:last-child):before { left: 17px; top: 36px; }
+.guide-price-card { padding: 15px; }
+.guide-price-card>strong { font-size: 25px; }
+.guide-all-link { gap: 8px; padding: 10px 8px; }
+.guide-link-kind { flex-basis: 52px; font-size: 8px; }
+.guide-all-link strong { font-size: 10px; }
+}
+
+/* 旅行ガイドの見出しは濃色背景上では白く表示 */
+.guide-hero h1 { color: #fff; }
+
+/* 追加・更新された銀行振込欄のスタイル */
+
+/* ===================================
+   銀行振込・口座情報
+=================================== */
+
+.guide-bank {
+  margin: 20px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.guide-bank-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.guide-bank-icon {
+  display: grid;
+  flex: 0 0 46px;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--accent-bg);
+  font-size: 23px;
+}
+
+.guide-bank-header h3 {
+  margin: 0 0 6px;
+  color: var(--text-h);
+  font-size: 1.05rem;
+}
+
+.guide-bank-header p {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.guide-bank-details {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.guide-bank-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 17px;
+  background: var(--surface);
+}
+
+.guide-bank-row + .guide-bank-row {
+  border-top: 1px solid var(--border);
+}
+
+.guide-bank-row span {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.guide-bank-row strong {
+  color: var(--text-h);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.guide-small-note {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .guide-bank {
+    padding: 17px;
+  }
+
+  .guide-bank-row {
+    padding: 13px 12px;
+  }
+}

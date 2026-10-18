@@ -1,0 +1,609 @@
+
+/* ===================================
+   HOME PAGE
+=================================== */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px;
+}
+
+/* ===================================
+   メインバナー
+=================================== */
+
+.home-page .welcome-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  min-height: 340px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(
+    125deg,
+    #102a43,
+    #234e78 58%,
+    #7098b8
+  );
+  box-shadow: var(--shadow);
+}
+
+.home-page .welcome-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.home-page .eyebrow,
+.home-page .art-caption {
+  font-family: var(--english);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.home-page .eyebrow {
+  color: #c7deef;
+}
+
+.home-page .welcome-banner h1 {
+  color: #fff;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.3;
+}
+
+.home-page .welcome-copy > p {
+  color: #e1ebf4;
+}
+
+.home-page .trip-dates {
+  margin-top: 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 0.82rem;
+}
+
+.home-page .welcome-actions {
+  margin-top: 24px;
+}
+
+/* ===================================
+   雪山イラスト
+=================================== */
+
+.home-page .welcome-art {
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #8cb7d5,
+    #e4f0f8 75%,
+    #f8fbfe
+  );
+}
+
+.home-page .sun {
+  position: absolute;
+  top: 18%;
+  right: 23%;
+  width: 72px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.35);
+}
+
+.home-page .mountain {
+  position: absolute;
+  left: -10%;
+  width: 125%;
+  height: 65%;
+  clip-path: polygon(
+    0 100%,
+    18% 40%,
+    29% 62%,
+    48% 5%,
+    66% 60%,
+    80% 28%,
+    100% 100%
+  );
+}
+
+.home-page .mountain-back {
+  bottom: 18%;
+  background: #a8c5d9;
+}
+
+.home-page .mountain-front {
+  bottom: -2%;
+  background: #f5f9fc;
+  clip-path: polygon(
+    0 100%,
+    0 58%,
+    20% 35%,
+    35% 59%,
+    55% 20%,
+    75% 54%,
+    88% 33%,
+    100% 50%,
+    100% 100%
+  );
+}
+
+.home-page .snow-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24%;
+  background: linear-gradient(180deg, transparent, #fff);
+}
+
+.home-page .art-caption {
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  color: #54728b;
+  font-size: 0.6rem;
+}
+
+/* ===================================
+   旅行カレンダー
+=================================== */
+
+.home-page .calendar-card {
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.home-page .calendar-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 5px 0 22px;
+}
+
+.home-page .calendar-heading h2 {
+  margin: 0;
+}
+
+.home-page .calendar-heading p {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.home-page .calendar-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.home-page .calendar-controls button {
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-h);
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.home-page .calendar-controls button:hover {
+  background: #edf4fa;
+}
+
+.home-page .calendar-controls .today-button {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+}
+
+.home-page .calendar-month-title {
+  margin-bottom: 12px;
+  color: var(--text-h);
+  font-family: var(--heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.home-page .weekday-row,
+.home-page .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.home-page .weekday-row {
+  margin-bottom: 8px;
+}
+
+.home-page .weekday {
+  padding: 5px 0;
+  color: #7b8796;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.home-page .weekday.sunday {
+  color: #c35b67;
+}
+
+.home-page .weekday.saturday {
+  color: #477db1;
+}
+
+.home-page .calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 10px 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: var(--text-h);
+  background: #f6f8fb;
+  text-align: center;
+  transition:
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.home-page .calendar-day:hover {
+  border-color: #9bb8d0;
+  transform: translateY(-1px);
+}
+
+.home-page .calendar-day.outside-month {
+  color: #a8b0ba;
+  background: #fbfcfd;
+}
+
+.home-page .calendar-day.is-today {
+  border-color: #7ba6cc;
+  box-shadow: inset 0 0 0 1px #7ba6cc;
+}
+
+.home-page .calendar-day.is-selected {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.home-page .calendar-day.trip-start {
+  color: #fff;
+  background: #234e78;
+}
+
+.home-page .calendar-day.trip-middle {
+  color: #234e78;
+  background: #e0edf7;
+}
+
+.home-page .calendar-day.trip-end {
+  color: #245a46;
+  background: #dcefe5;
+}
+
+.home-page .day-number {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-page .day-label {
+  max-width: 100%;
+  font-size: clamp(0.58rem, 1vw, 0.72rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* カレンダーの凡例 */
+.home-page .trip-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.home-page .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+}
+
+.home-page .legend-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 4px;
+}
+
+.home-page .legend-start {
+  background: #234e78;
+}
+
+.home-page .legend-middle {
+  background: #e0edf7;
+  border: 1px solid #c2d8e9;
+}
+
+.home-page .legend-end {
+  background: #dcefe5;
+}
+
+.home-page .legend-today {
+  border: 2px solid #7ba6cc;
+  background: transparent;
+}
+
+/* 選択した日付の予定 */
+.home-page .selected-day-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #f2f6fa;
+}
+
+.home-page .selected-date {
+  display: flex;
+  flex: 0 0 66px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--accent);
+}
+
+.home-page .selected-date strong {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.home-page .selected-date span {
+  font-size: 0.72rem;
+}
+
+.home-page .selected-day-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-page .selected-day-content h3 {
+  margin-bottom: 5px;
+}
+
+.home-page .selected-day-content p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* 旅行日程の要約 */
+.home-page .trip-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.home-page .trip-summary-item {
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.home-page .trip-summary-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-family: var(--english);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.home-page .trip-summary-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-h);
+  font-size: 0.92rem;
+}
+
+.home-page .trip-summary-item p {
+  font-size: 0.82rem;
+}
+
+/* ===================================
+   旅行ガイド案内カード
+=================================== */
+
+.home-page .tip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.home-page .tip-icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  font-size: 1.5rem;
+}
+
+.home-page .tip-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-h);
+}
+
+.home-page .tip-card p {
+  margin-bottom: 9px;
+}
+
+/* ===================================
+   スマートフォン対応
+=================================== */
+
+@media (max-width: 700px) {
+  .home-page {
+    gap: 18px;
+    padding: 14px;
+  }
+
+  .home-page .welcome-banner {
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+  }
+
+  .home-page .welcome-copy {
+    padding: 27px 22px;
+  }
+
+  .home-page .welcome-banner h1 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+
+  .home-page .welcome-art {
+    min-height: 170px;
+  }
+
+  .home-page .trip-dates {
+    border-radius: 12px;
+    line-height: 1.5;
+  }
+
+  .home-page .calendar-card {
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
+
+  .home-page .calendar-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .home-page .calendar-controls {
+    width: 100%;
+  }
+
+  .home-page .calendar-controls button {
+    flex: 1;
+    padding-inline: 7px;
+  }
+
+  .home-page .weekday-row,
+  .home-page .calendar-grid {
+    gap: 4px;
+  }
+
+  .home-page .calendar-day {
+    min-height: 58px;
+    padding: 8px 1px 5px;
+    border-radius: 8px;
+  }
+
+  .home-page .day-number {
+    font-size: 0.88rem;
+  }
+
+  .home-page .day-label {
+    font-size: 0.55rem;
+  }
+
+  .home-page .trip-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .selected-day-panel {
+    padding: 14px;
+  }
+
+  .home-page .tip-card {
+    padding: 18px;
+  }
+}
+
+/* ===================================
+   ダークモード
+=================================== */
+
+/* ホームのカードをページ内に自然に収める */
+.home-page { width: 100%; min-width: 0; padding: 0; }
+.home-page .welcome-banner { isolation: isolate; }
+.home-page .calendar-day { cursor: pointer; }
+.home-page .calendar-day:focus-visible { outline: 3px solid #7ba6cc; outline-offset: 2px; }
+@media (max-width: 700px) {
+  .home-page { padding: 0; }
+  .home-page .calendar-day { overflow: hidden; }
+  .home-page .day-label { white-space: normal; }
+}
+
+/* ===================================
+   動画表示（追加分）
+   既存のカレンダーCSSは変更しない
+=================================== */
+
+.home-page .welcome-art.welcome-video {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #173b59;
+  isolation: isolate;
+}
+
+.home-page .welcome-video-player {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.home-page .welcome-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 30, 52, .30));
+  pointer-events: none;
+  z-index: 1;
+}
